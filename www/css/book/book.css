@@ -1,0 +1,15 @@
+/*
+
+app-template.css overrides
+
+remove this comment if used
+remove this file if not
+
+*/
+
+#book .footer{
+  height:60px;
+}
+#book .todo-list li label{
+  font-size: 16px;
+}

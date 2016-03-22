@@ -1,0 +1,45 @@
+<ion-view id="book" view-title="book" cache-view="false">
+    <section class="todoapp">
+        <header class="header">
+            <h1>todos</h1>
+            <form ng-submit="add()">
+                <input class="new-todo" placeholder="What needs to be done?" ng-model="text" autofocus>
+            </form>
+        </header>
+        <!-- This section should be hidden by default and shown when there are todos -->
+        <section class="main">
+            <input class="toggle-all" type="checkbox" ng-click="toggleAll()">
+            <label for="toggle-all">Mark all as complete</label>
+            <ul class="todo-list">
+                <li ng-repeat="todo in todos" ng-class="{completed:todo.completed,editing:todo.id === currentEditing}">
+                    <div class="view">
+                        <input class="toggle" type="checkbox" ng-model="todo.completed" checked>
+                        <label ng-dblclick="editing(todo.id)">{{todo.text}}</label>
+                        <button class="destroy" ng-click="remove(todo.id)"></button>
+                    </div>
+                    <form ng-submit="save()">
+                        <input class="edit" ng-model="todo.text">
+                    </form>
+                </li>
+            </ul>
+        </section>
+        <!-- This footer should hidden by default and shown when there are todos -->
+        <footer class="footer">
+            <!-- This should be `0 items left` by default -->
+            <span class="todo-count"><strong>{{todos.length}}</strong> item left</span>
+            <ul class="filters">
+                <li>
+                    <a class="selected" ng-class="{selected:selector.completed == undefined}" href="/">All</a>
+                </li>
+                <li>
+                    <a ng-class="{selected:selector.completed == false}" href="#/tab/book/active">Active</a>
+                </li>
+                <li>
+                    <a ng-class="{selected:selector.completed == true}" href="#/tab/book/completed">Completed</a>
+                </li>
+            </ul>
+            <!-- Hidden if no completed items are left ↓ -->
+            <button class="clear-completed" ng-click="clear()" ng-show="existComplted()">Clear completed</button>
+        </footer>
+    </section>
+</ion-view>

@@ -1,0 +1,35 @@
+<ion-view id="movie_detail" view-title="movie_detail" cache-view="false">
+    <header id="header">
+        <div class="header-left" ng-click="goBack()">
+            <span></span>
+        </div>
+        <div class="header-center">
+            <span>{{movie.title}}</span>
+        </div>
+        <div class="header-right">
+            <span></span>
+        </div>
+    </header>
+    <ion-content class="scroll-content">
+        <img ng-src="{{movie.images.large}}" alt="{{movie.title}}">
+        <p>
+            导演：<span ng-repeat="item in movie.directors">{{item.name}}{{$last?'':'、'}}</span>
+        </p>
+        <p>
+            主演：<span ng-repeat="item in movie.casts">{{item.name}}{{$last?'':'、'}}</span>
+        </p>
+        <p>
+            想看人数：<span>{{movie.wish_count}}</span>
+        </p>
+        <p>
+            评分人数：<span>{{movie.ratings_count}}</span>
+        </p>
+        <p>简介：<span>{{movie.summary}}</span></p>
+        <div class="mask" ng-show="loading">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,27 @@
+<ion-view id="menu_detail" view-title="menu_detail" cache-view="false">
+    <header id="header">
+        <div class="header-left" ng-click="goBack()">
+            <span></span>
+        </div>
+        <div class="header-center">
+            <span>{{menudetail.title}}</span>
+        </div>
+        <div class="header-right">
+            <span></span>
+        </div>
+    </header>
+    <div class="all">
+        <p class="intro">{{menudetail.imtro}}</p>
+        <img src="{{item}}" ng-repeat="item in menudetail.albums">
+        <p class="zl">{{menudetail.ingredients}}</p>
+        <p class="fl">{{menudetail.burden}}</p>
+        <div class="steps" ng-repeat="item in menudetail.steps">
+            <div class="c">
+                <p>{{item.step}}</p>
+                <p><img src="{{item.img}}"></p>
+            </div>
+        </div>
+    </div>
+    <!-- <div>{{menudetail.id}}</div> -->
+    <hr />
+</ion-view>

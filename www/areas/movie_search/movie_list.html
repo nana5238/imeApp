@@ -1,0 +1,34 @@
+<ion-view id="movie_list" view-title="movie_list" cache-view="false">
+    <ion-content class="scroll-content">
+        <ion-refresher pulling-text="获取最新数据..." refreshing-text="刷新完毕" on-refresh="list()">
+        </ion-refresher>
+        <a class="list-group-item" ng-repeat="item in subjects">
+            <span class="badge">{{item.rating.average}}</span>
+            <div class="media">
+                <div class="media-left">
+                    <img class="media-object" ng-src="{{item.images.small}}" alt="item.title" height="128">
+                </div>
+                <div class="media-body">
+                    <h3 class="media-heading">{{item.title}}</h3>
+                    <p>
+                        类型：<span>{{item.genres.join('、')}}</span>
+                    </p>
+                    <p>
+                        上映年份： <span>{{item.year}}</span>
+                    </p>
+                    <p>
+                        捣眼：<span ng-repeat="d in item.directors">{{d.name + ($last?'':'、')}}</span>
+                    </p>
+                    <p>
+                        主演：<span ng-repeat="c in item.casts">{{c.name}}{{$last?'':'、'}}</span>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <div ng-hide="pms_isMoreItemsAvailable" style="text-align: center">
+            <span>我去，地主家也没有余粮啊！</span>
+        </div>
+        <ion-infinite-scroll ng-if="pms_isMoreItemsAvailable" on-infinite="morelist()" distance="1%">
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>

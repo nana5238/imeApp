@@ -1,0 +1,37 @@
+<ion-view id="menu_list" view-title="menu_list" cache-view="false">
+    <header id="header">
+        <div class="header-left" ng-click="goBack()">
+            <span></span>
+        </div>
+        <div class="header-center">
+            <div>
+                <span>{{name}}</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <span></span>
+        </div>
+    </header>
+    <ion-content class="scroll-content">
+        <ion-refresher pulling-text="获取最新数据..." refreshing-text="刷新完毕" on-refresh="morelist()">
+        </ion-refresher>
+        <a class="list-group-item" ng-repeat="item in subjects" href="#/menudetail/{{cid}}/{{item.id}}">
+            <div class="media">
+                <div class="media-left">
+                    <img class="media-object" ng-src="{{item.albums[0]}}" alt="item.title" height="128">
+                </div>
+                <div class="media-body">
+                    <p>菜名：<span>{{item.title}}</span></p>
+                    <p>
+                        主料：<span>{{item.ingredients}}</span>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <div ng-hide="pms_isMoreItemsAvailable" style="text-align: center">
+            <span>我去，地主家也没有余粮啊！</span>
+        </div>
+        <ion-infinite-scroll ng-if="pms_isMoreItemsAvailable" on-infinite="morelist()" distance="1%">
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>

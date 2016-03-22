@@ -1,0 +1,46 @@
+<ion-view id="movie" view-title="movie" cache-view="false">
+    <ion-content id="home-content" class="scroll-content" scroll="false">
+        <div id="headerBar" class="headerBar">
+            <div class="headerBar-logo">
+                <i></i>
+            </div>
+            <a class="headerBar-search">
+                <span></span>
+                <div>
+                    <input maxlength="20" autocomplete="true" placeholder="查看你想看的电影" ng-model='$parent.input' />
+                </div>
+            </a>
+            <a class="headerBar-login">
+                <span ng-click="search()">搜索</span>
+            </a>
+        </div>
+        <!--头部滚动条-->
+        <div class="headerSlider">
+            <div id="headerSlider" class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" ng-repeat="item in headerSlideData">
+                        <img alt="{{item.alt}}" ng-src="{{item.src}}">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <!-- 功能导航 -->
+        <nav id="nav">
+            <a href="#/movie/in_theaters/1">
+                <img src="img/movie/nav0.png" />
+                <h2>正在热映</h2>
+            </a>
+            <a href="#/movie/coming_soon/1">
+                <img src="img/movie/nav1.png" />
+                <h2>即将上映</h2>
+            </a>
+            <a href="#/movie/top250/1">
+                <img src="img/movie/nav2.png" />
+                <h2>Top250</h2>
+            </a>
+        </nav>
+        <!--回到顶部的区块-->
+        <div class="back_top "></div>
+    </ion-content>
+</ion-view>

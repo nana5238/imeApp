@@ -1,0 +1,58 @@
+/*
+* @Author: wsj11
+* @Date:   2016-03-02 20:15:23
+* @Last Modified by:   wsj11
+* @Last Modified time: 2016-03-21 21:06:22
+*/
+#menu_detail{
+  padding: 0 10px;
+}
+#menu_detail h2 {
+    font-size: 18px;
+}
+
+#menu_detail p {
+    margin: 0 0 5px;
+}
+
+#menu_detail .media {
+    margin-top: 0px;
+}
+
+#menu_detail #header {
+    display: block;
+    background-size: 100% 44px;
+    width: 100%;
+    height: 44px;
+}
+
+#menu_detail .header-left {
+    width: 40px;
+    height: 44px;
+    position: absolute;
+}
+
+#menu_detail .scroll-content {
+    top: 45px;
+}
+
+#menu_detail .header-left span {
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: 12px 0 0 10px;
+    background-size: 200px 200px;
+    background-position: -20px 0;
+    background-image: url(../../img/common/sprites.png);
+}
+
+#menu_detail .header-center {
+    text-align: center;
+    line-height: 45px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#menu_detail {
+    overflow-y: scroll;
+}

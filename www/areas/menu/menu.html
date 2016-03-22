@@ -1,0 +1,38 @@
+<ion-view id="menu" view-title="menu" cache-view="false">
+    <ion-content id="home-content" class="scroll-content" scroll="false">
+        <div id="headerBar" class="headerBar">
+            <div class="headerBar-logo">
+                <i></i>
+            </div>
+            <a class="headerBar-search">
+                <span></span>
+                <div>
+                    <input maxlength="20" autocomplete="true" placeholder="搜索菜谱" />
+                </div>
+            </a>
+            <a class="headerBar-login">
+                <span>搜索</span>
+            </a>
+        </div>
+        <!--头部滚动条-->
+        <div class="headerSlider">
+            <div id="headerSlider" class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" ng-repeat="item in headerSlideData">
+                        <img alt="{{item.alt}}" ng-src="{{item.src}}">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <!-- 功能导航 -->
+        <nav id="nav">
+            <div ng-repeat="item in menu">
+                <a href="#/menu/{{item.cid}}/1">
+                    <img src="{{item.img}}" />
+                    <h2>{{item.name}}</h2>
+                </a>
+            </div>
+        </nav>
+    </ion-content>
+</ion-view>

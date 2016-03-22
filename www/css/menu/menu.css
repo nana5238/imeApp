@@ -1,0 +1,359 @@
+#menu ion-header-bar {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    background-image: none;
+}
+
+#menu .has-header {
+    top: 0;
+}
+
+#menu #nav a {
+    display: block;
+    float: left;
+    text-align: center;
+    margin-top: 15px;
+    width: 33%;
+    font-size: 14px;
+}
+
+#menu ion-content {
+    overflow: scroll;
+}
+
+
+/*头部搜索栏*/
+
+#menu .headerBar {
+    background-color: #E4B906;
+    width: 100%;
+    height: 45px;
+}
+
+#menu .headerBar-logo {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 56px;
+    height: 45px;
+    display: inline-block;
+}
+
+#menu .headerBar-logo i {
+    display: inline-block;
+    height: 20px;
+    width: 56px;
+    background: url("../../img/common/logo.png") no-repeat;
+    background-size: contain;
+    margin-left: 14px;
+    margin-top: 12px;
+}
+
+#menu .headerBar-search {
+    position: absolute;
+    left: 66px;
+    right: 40px;
+    width: auto;
+    height: 30px;
+    margin-top: 7px;
+    color: #ffffff;
+    display: inline-block;
+    background-color: #ffffff;
+    border-radius: 15px;
+}
+
+#menu .headerBar-search span {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background: url("../../img/common/sprites.png") no-repeat;
+    background-position: -60px -109px;
+    background-size: 200px 200px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+#menu .headerBar-search div {
+    display: inline-block;
+    height: 100%;
+    width: auto;
+}
+
+#menu .headerBar-search div input {
+    border: 0;
+    display: inline-block;
+    background: 0;
+    font-size: 13px;
+    line-height: 1.2em;
+    height: 1.4em;
+    width: 100%;
+    vertical-align: middle;
+    margin-top: -13px;
+    color: #989191;
+}
+
+#menu .headerBar-login {
+    width: 30px;
+    height: inherit;
+    position: absolute;
+    right: 7px;
+    display: inline-block;
+}
+
+#menu .headerBar-login span {
+    margin-top: 12px;
+    color: #ffffff;
+    font-size: 15px;
+    display: inline-block;
+}
+
+
+/*头滚动条*/
+
+#menu .headerSlider .swiper-container {
+    height: 182px;
+    width: 100%;
+}
+
+#menu .headerSlider .swiper-container img {
+    height: 100%;
+    width: 100%;
+}
+
+
+/*功能导航*/
+
+#menu #nav {
+    height: 125px;
+    width: 100%;
+    padding: 0 3%;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 1px 1px #ebebeb;
+}
+
+#menu #nav span {
+    display: block;
+    float: left;
+    width: 25%;
+    height: 60px;
+    margin-top: 16px;
+}
+
+#menu #nav span img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0px auto;
+}
+
+#menu #nav span h2 {
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+/*京东头条*/
+
+#menu .toutiao {
+    padding-top: 10px;
+    display: inline-block;
+    height: 42px;
+    width: 100%;
+    background-color: white;
+    horiz-align: center;
+}
+
+#menu .toutiao img {
+    height: 28px;
+    width: 25%;
+    ;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+#menu .toutiao #toutiaoSlider {
+    display: inline-block;
+    height: 25px;
+    width: 70%;
+}
+
+
+/*秒杀*/
+
+#menu #centent {
+    margin: 10px 5px;
+    background-color: #fff;
+    box-shadow: 0 1px 1px #dcdcdc;
+}
+
+#menu .centent-top {
+    height: 32px;
+    overflow: hidden;
+}
+
+#menu .centent-top span {
+    display: block;
+    width: 16px;
+    height: 20px;
+    margin: 4px 4px 0 4px;
+    background-image: url(../../img/menu/seckill-icon.png);
+    background-size: 16px 20px;
+    float: left;
+}
+
+#menu .centent-top h2 {
+    float: left;
+    font-size: 15px;
+    color: #f00;
+    line-height: 30px;
+    margin-right: 10px;
+    margin-top: 0px;
+}
+
+#menu .centent-time span {
+    background-image: none;
+    margin: 5px 1px;
+    width: 5px;
+    color: #5d5d5d;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#menu .centent-top .time-text {
+    color: #fff;
+    font-size: 16px;
+    width: 15px;
+    font-weight: 300;
+    background-color: #5d5d5d;
+}
+
+#menu .centent-more {
+    float: right;
+    line-height: 30px;
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+#menu .centent-bottom {
+    padding-top: 7px;
+    overflow: hidden;
+}
+
+#menu .centent-bottom li {
+    width: 33.3%;
+    float: left;
+}
+
+#menu .centent-bottom li img {
+    display: block;
+    border-right: 1px solid #e6e6e6;
+    margin: 0;
+    padding: 0;
+    height: 100px;
+    width: 100%;
+}
+
+#menu .centent-bottom li span {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+}
+
+#menu .seckill-now {
+    color: #f15353;
+}
+
+#menu .seckill-old {
+    text-decoration: line-through;
+}
+
+
+/*广告*/
+
+#menu .ad ion-slide {
+    text-align: center;
+    margin-top: 5px;
+}
+
+#menu .ad ion-slide img {
+    height: 15%;
+    width: 100%;
+}
+
+
+/*商品展示*/
+
+#menu .floor {
+    margin: 0 5px 5px;
+    background-color: #fff;
+    box-shadow: 0 1px 1px #dcdcdc;
+    overflow: hidden;
+}
+
+#menu .floor-title {
+    font-size: 15px;
+    padding-top: 8px;
+    padding-left: 7px;
+    padding-bottom: 5px;
+}
+
+#menu .floor-title:before {
+    display: inline-block;
+    content: '';
+    width: 3px;
+    height: 12px;
+    background-color: #d8505c;
+    margin: 1px 7px 0 0;
+}
+
+#menu .floor-product {
+    width: 100%;
+}
+
+#menu .floor-product-list {
+    width: 50%;
+    overflow: hidden;
+    float: left;
+}
+
+#menu .floor-product-list img {
+    width: 100%;
+    display: block;
+    border-top: 1px solid #eee;
+}
+
+#menu .floor-left {
+    border-right: 1px solid #eee;
+    margin-left: -1px;
+}
+
+
+/*回到头部滚动条*/
+
+#menu .back_top {
+    width: 35px;
+    height: 35px;
+    position: fixed;
+    bottom: 55px;
+    right: 10px;
+    background: url("../../img/menu/scroll-to-top-icon.png") no-repeat;
+    background-size: 35px 35px;
+    opacity: 0;
+    transition: all .3s ease 0s;
+    -webkit-transition: all .3s ease 0s;
+    z-index: 100;
+}
+
+#menu h2 {
+    font-size: 16px;
+}
+
+#menu #nav img {
+    width: 60px;
+}
